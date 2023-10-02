@@ -1,0 +1,721 @@
+ # 
+ Cypress Interview Questions with Answers
+
+Question 1. What is Cypress?
+Ans : Cypress is a modern digital front-end testing tool that is fully based on JavaScript. Its purpose is to make it easier for developers and QA engineers to test an application. 
+Cypress is a more developer-friendly tool that works directly in the browser and employs a novel DOM modification method.
+
+Question 2. Which language is Cypress based on?
+Ans: It's built-in Node.js and distributed as an npm module. Because it is built on Node.js, it writes tests in JavaScript. However, 90 percent of the code may be accomplished using Cypress's built-in commands that are straightforward to grasp.
+
+Question 3:  What is Cypress Architecture?
+Ans: Cypress engine is completely contained within the browser.It enables Cypress to monitor browser behavior and influence it in real-time by modifying the DOM and altering network requests and answers on the fly. This question is also one of the important questions which can come in Cypress Interview Questions. However, Cypress functions directly within the browser. As a result, the browser performs the commands that we execute in a script.
+
+Cypress is a modern end-to-end test automation framework for web applications. Its architecture is designed to provide fast, reliable, and easy-to-use testing capabilities. Understanding the Cypress architecture is crucial for effectively using and extending the framework. Below are the key components and concepts of the Cypress architecture:
+
+1.Node.js-based Architecture: Cypress is built on top of Node.js, which allows it to leverage the JavaScript runtime environment. It utilizes the power of Node.js for various functionalities, including executing tests, handling browser automation, and interacting with the file system.
+
+2.Dual Architecture: Cypress has a dual architecture that separates the test code from the browser automation. This means that Cypress runs its tests in the Node.js environment while performing browser automation in the browser's environment, allowing for efficient parallelism and separation of concerns.
+
+3.Test Runner: The Cypress Test Runner is a graphical user interface (GUI) that allows developers and testers to execute and manage tests interactively. It provides real-time feedback, including the ability to watch test execution, view logs, and inspect application elements during test runs.
+
+4.Browser Automation: Cypress uses a custom browser automation layer to interact with the web application being tested. This custom automation is built on top of the Electron browser, which is an open-source framework based on Chromium. The custom automation provides Cypress with full control over the browser, enabling fast and stable test execution.
+
+5.Direct Access to the DOM: Unlike traditional Selenium-based frameworks, Cypress has direct access to the application's Document Object Model (DOM). This allows Cypress to bypass the limitations and flakiness associated with using WebDriver and interact directly with the DOM to perform actions and assertions.
+
+6.Command Chaining: Cypress employs a chaining syntax for its commands, making the test code more readable and expressive. Commands are chained together, allowing for a clear sequence of actions and assertions, similar to writing natural language statements.
+
+7.Time Travel: One of Cypress's unique features is "time travel," which enables the Test Runner to go back and forth in time during test execution. Testers can inspect the application's state at specific points in the test, facilitating debugging and troubleshooting.
+
+8.Automatic Waiting and Retrying: Cypress automatically waits for elements to become available before performing actions on them. It also intelligently retries commands if they fail, making tests more reliable and less prone to flakiness.
+
+9.File Structure: Cypress encourages a specific file structure for test organization. By default, tests, fixtures, and other assets are placed within the "cypress" directory, making it easy to locate and manage test-related files
+
+Question 4: Which browsers are supported by Cypress?
+Answer: Following browsers are supported by Cypress.
+Chrome
+Chromium
+Canary
+Microsoft Edge (Chromium-based)
+Electron(Default)
+Mozilla Firefox (beta support)
+
+Question 5: What is a Cypress Test Runner?
+Ans: Cypress Test Runner runs tests in an interactive runner, which allows you to observe commands executing while also seeing the application being tested. The test runner's essential subcomponents on which we should focus while executing our test cases are Command Log, Url Preview, App Preview, Test Status, and Viewport Sizing.
+
+Question 6: What is a Cypress Dashboard?
+Ans: The Cypress Dashboard is a feature that allows you to view captured tests when executing Cypress tests via your CI provider. The Dashboard displays what occurred during the execution of your tests.
+
+Question 7:  What are the perks of Cypress?
+Ans: Cypress has several advantages; a couple of them are as follows:
+1.We may record the entire set of tests using the Video Capture tool provided by Cypress.
+2.Cypress is much quicker than Selenium-based tools since it directly performs instructions on the browser.
+3.Cypress Debuggability gives us access to developer tools in the browser, allowing us to analyze directly in the browser.
+4.Cypress is a contemporary NodeJS framework that works with Single Page Applications and internal Ajax calls.
+5.Cypress always waits for commands, assertions, and animations to complete, so we seldom have to add extra sleep to our tests.
+6.Cypress conducts tests and commands directly on the browser, making it less unreliable.
+7.Cypress has Time Travel features, so it takes screenshots of each test, and after execution, we can see exactly what happened in each step. We don't need to configure this because it comes standard with Cypress.
+
+                                                OR
+Easy Setup: Cypress JavaScript is very easy to set up and use. It can be easily installed with npm and requires minimal setup. Cypress also comes with a user-friendly graphical interface, which makes it easy for developers to navigate and use.
+
+Comprehensive APIs: Cypress JavaScript provides a rich set of APIs for interacting with the DOM, making HTTP requests, and more. This makes it easy to write tests that simulate user interactions with your web application.
+
+Real-Time Reloads: Cypress JavaScript provides real-time reloads, which means that any changes made to the code or tests are instantly reflected in the browser. This saves developers time and makes it easy to see the impact of changes in real-time.
+
+Automatic Waiting: Cypress JavaScript automatically waits for assertions to pass and for elements to appear before executing the next command. This makes tests more stable and reduces the likelihood of false negatives.
+
+Debugging: Cypress JavaScript comes with built-in debugging tools, making it easy to troubleshoot and fix failing tests. Developers can use these tools to inspect the DOM, debug JavaScript code, and more.
+
+Time Travel: Cypress JavaScript provides a unique feature called "time travel" that allows you to go back and forth in time, inspecting and debugging your application at any point in the test. This feature can save developers a lot of time and effort when trying to debug complex test scenarios.
+
+Cross-Browser Testing: Cypress JavaScript supports cross-browser testing and can run tests on different browsers. This makes it easy to ensure that your application works as expected across different browsers.
+
+Automatic Screenshots and Video:Cypress JavaScript can automatically take screenshots and record videos of your tests, making it easy to see what happened during a test run. This can be helpful when trying to identify issues or bugs in your application.
+
+Custom Commands: Cypress JavaScript allows developers to create custom commands that can be reused across different tests. This makes it easy to create a library of common test commands and reduces the amount of code duplication.
+
+Continuous Integration: Cypress JavaScript can be easily integrated with popular continuous integration (CI) tools like Jenkins, CircleCI, and Travis CI. This makes it easy to run tests automatically as part of your CI/CD pipeline.
+
+
+Question 8: What are the drawbacks of Cypress?
+Ans: Cypress has several disadvantages; a couple of them are as follows:
+1.Cypress does not support all browsers, including Safari and Internet Explorer.
+2.Multiple tabs are not supported by Cypress.
+3.Cypress tests cannot be run on different browsers at the very same time.
+4.The iframe is not supported by Cypress.
+5.Cypress only supports JavaScript and Typescript.
+
+Question 9: Does Cypress use mocha?
+Ans : Cypress has expanded mocha and used its bdd syntax for unit and integration testing.
+
+Question 10: What is the Testing Framework Cypress comes with?
+Ans: Cypress includes the assertion libraries Mocha and Chai; however, we cannot utilize Junit or TestNG in Cypress.
+
+Question 11: How do you set up Cypress?
+Ans: If we wish to set up Cypress, we must first install Node. Once Node is installed, we can install Cypress with the command:  npm install Cypress.
+                                     Or
+Setting up Cypress involves several steps to get the framework and your project ready for test automation. Here's a step-by-step guide to setting up Cypress:
+
+1.Prerequisites: Node.js: Ensure you have Node.js installed on your system. You can download the latest version from the Node.js website (<https://nodejs.org/>).
+
+2.Create a new project or use an existing one: If you are starting a new project, create a new directory for your project and navigate to it in the terminal. If you have an existing project, navigate to its root directory in the terminal.
+
+3.Initialize the project: Run the following command in the terminal to create a new package.json file and set up the project dependencies:  npm init -y
+
+4.Install Cypress:Run the following command to install Cypress as a dev dependency in your project:
+npm install cypress --save-dev
+
+5.Verify Cypress installation: After the installation is complete, you should see a node_modules folder in your project, containing Cypress and its dependencies.
+
+6.Open Cypress Test Runner: To open the Cypress Test Runner, run the following command in the terminal: npx cypress open
+This will launch the Cypress Test Runner, and it will create a cypress folder in your project containing example test files.
+
+7.Configure Cypress (optional):Cypress works out of the box without any configuration. However, you may want to customize its behavior. Create a cypress.json file in your project's root directory to add configuration options. Refer to the Cypress documentation for available configuration options.
+
+8.Write your tests:In the cypress/integration folder, you can create your test files with the .spec.js extension. These files will contain your test code using Cypress commands.
+
+9.Run your tests: To run your tests from the terminal, use the following command: npx cypress run
+This will execute all the tests in the cypress/integration folder in headless mode.
+Alternatively, you can use the Cypress Test Runner to run and interactively manage your tests by running: npx cypress open
+
+Question 12: What exactly is Cypress CLI?
+Ans: Cypress CLI is a unique characteristic in Cypress that allows us to execute our Cypress tests from the command line. This functionality comes in handy when running our Cypress tests in pipelines. It gives several choices, and flags determine the behavior of the Cypress test.
+
+Question 13: In Cypress, how can you create suites?
+Ans: We may construct a describe() block. The described block serves as a suite, and each test may be built as a separate () block within it.Describe() works similar to a suite in this scenario.
+
+Question 14: Tell us about a few Cypress commands
+Ans: There are several Cypress commands:-
+
+1.cy.visit():This command is used to visit a specific URL. It is typically the starting point of your test and loads the web application to the specified URL. Example : - cy.visit('<https://example.com>');
+
+2.cy.log(): Cypress console logs are shown during execution using cy.log.
+
+3.cy.get(): In Cypress, cy. get is used to retrieve DOM elements. Once we have DOM elements, we can execute actions on them, such as clicking, typing, and so on. The cy.get() command is used to locate elements on the page based on various selectors such as IDs, classes, attributes. Example: cy.get('#username').type('myUsername');
+
+4.cy.URL(): cy.URL() returns the current URL of the currently active page.This command retrieves the current URL of the web page and can be used for assertion purposes. Example: cy.url().should('include', '/login');
+
+5.cy.contains(): cy.contains() is used to find elements containing specific text content. It is helpful for locating elements by their visible text. Example : cy.contains('Login').click();
+
+6.cy.click(): The cy.click() command is used to simulate a mouse click on the selected element. Example : cy.get('.submit-button').click();
+
+7.cy.type():The cy.type() command is used to type text into input fields or text areas. Example: cy.get('#username').type('myUsername');
+
+8.cy.wait():The cy.wait() command is used to introduce a static delay in the test. It's useful when waiting for elements or animations to load, but it should be used sparingly to avoid flaky tests. Example: cy.wait(2000); // Wait for 2 seconds
+
+9.cy.contains() within cy.get(): You can use cy.contains() within cy.get() to locate elements within a specific container.
+Example: cy.get('.menu').contains('Logout').click();
+
+10.cy.assert():The cy.assert() command is used to make assertions and verify expected conditions during test execution.
+Example: cy.get('.title').should('have.text', 'Welcome to the website');
+
+11.cy.intercept(): cy.intercept() allows you to intercept and stub network requests, enabling you to control the application's network behavior during tests. Example: cy.intercept('GET', '/api/users', { fixture: 'users.json' });
+
+Question 15: Which commands are used for interacting with DOM elements?
+Ans:
+.dblclick(): is used to perform a double click on an element.
+.type(): This function is used to type on elements or text boxes.
+.check(): is used to check checkboxes or radio buttons (s).
+.select(): Within a choose>, choose an option>.
+.click(): is used to perform a click on the element.
+.rightclick(): is used to perform a right-click on an element.
+.clear(): is used to clear the fields or text boxes.
+.uncheck(): is used to uncheck checkboxes or radio buttons (s).
+
+Question 16: What selectors will Cypress support?
+Ans: Cypress, by default, only supports CSS selectors. However, we can use a third-party plugin to support Xpath selectors.
+
+Question 17: In Cypress, what is an environment variable?
+Ans: The Environment Variables are variables whose values are established at the operating system level and outside of the context of the application or framework.
+
+Question 18: What are Preserve cookies in Cypress?
+Ans: Cypress clears the cookies after each test by default. To avoid removing cookies, utilize the preserve cookies feature in Cypress.
+
+Question 19: How can you get the first and last child of the selected element in cypress?
+Ans: .first() and.last() are used to obtain the element's first and last child.
+
+                             OR
+In Cypress, you can use various methods to get the first and last child of the selected element. The approach you choose will depend on the specific HTML structure and the context of your test. Below are a few methods to achieve this:  
+
+1. Using :first-child and :last-child pseudo-selectors: To select the first child of an element, you can use the :first-child pseudo-selector in the cy.get() command. Similarly, to select the last child, you can use the :last-child pseudo-selector.
+
+javascript code
+// Select the first child element
+cy.get('.parent-element :first-child').click();
+// Select the last child element
+cy.get('.parent-element :last-child').click();
+Please note that the :first-child and :last-child pseudo-selectors work based on the immediate children of the parent element.
+
+2.Using first() and last() functions: Cypress provides the first() and last() functions, which allow you to get the first and last elements from a list of selected elements. These functions are useful when dealing with multiple elements that share the same selector.
+
+javascript Copy code
+// Get the first element matching the selector
+cy.get('.child-element').first().click();
+
+// Get the last element matching the selector
+cy.get('.child-element').last().click();
+
+3.Using .children() function: You can use the .children() function to retrieve all direct children of the selected element. Then, you can use .first() and .last() to get the first and last child elements, respectively.
+
+javascript Copy code
+// Get the first child element
+cy.get('.parent-element').children().first().click();
+
+// Get the last child element
+cy.get('.parent-element').children().last().click();
+
+Question 20: What exactly are custom commands in Cypress?
+Ans: Cypress comes with a default set of commands such as cy.visit, cy.relaod, and so on. We can also write our own custom commands in Cypress.For example, I may write instructions like cy.login() that will prompt the user for their username and password before clicking the submit button.
+
+We may implement the custom command using the code below.
+Cypress.Commands.add("login", (username, password) => {
+  //adding a new command named login
+  cy.get("#username").type(username);
+  cy.get("#password").type(password);
+  cy.get("#login").click();
+});
+
+Question 21: In Cypress, how do you type Key-press?
+Ans: Key-pressing may be done in Cypress using the.type() command. If we need to utilize keys like CTRL, SHIFT, ALT, and so on, we must define them in brackets as seen below.Example: -  cy.get(‘login’).type('{shift}{alt}hello'));
+
+Question 22: How to get the title of the page?
+Ans: cy.title() : cy.title() can be used to get the title of the currently active window.Example:- cy.title().should('eq','Instagram Login or Signup')
+
+Question 23 : How can you get the value from the Cypress Configuration file?
+Ans : Using Cypress.config(), we can read the cypress.config values
+
+Question 24: How can you make advantage of the sleep in Cypress?
+Ans : cy.wait(): This function is used to wait for a specified length of time.Example:- cy.wait(1000)
+
+Question 25: In Cypress, how do you get to the shadow DOM?
+Ans: In Cypress, we may access the aforesaid shadow dom using the code below. cy.get('.shadow-host').shadow().find('.my-button').click().
+
+Question 26: What exactly is Shadow DOM?
+Ans: Shadow DOM allows concealed DOM trees to be added to ordinary DOM tree components — this shadow DOM tree begins with a shadow root.
+
+Question 27: How does Cypress differ from other testing frameworks?
+Ans: Cypress is different from other testing frameworks in several ways. It runs in the browser, which means it can interact with web applications in real-time. It also has a unique architecture that allows it to run tests asynchronously, which makes it faster than other frameworks. Additionally, Cypress has built-in features for debugging and automatic waiting.
+
+Question 28: How does Cypress handle asynchronous code?
+Ans: Cypress handles asynchronous code by using a command queue. Commands are added to the queue and executed in order, one at a time. Cypress also provides several built-in commands that are used to wait for asynchronous actions to complete, such as waiting for an element to be visible or waiting for an HTTP request to complete.
+
+Question 29: How do you create a test in Cypress?
+Answer: To create a test in Cypress, you need to create a spec file and write test cases using Cypress commands. You can use the Cypress API to interact with elements on the page, make HTTP requests, and test user interactions. You can also use assertions to check that the expected results are achieved.
+
+Question 30: How do you debug a test in Cypress?
+Ans: Cypress provides a powerful debugging tool called the Cypress Test Runner. You can use the Test Runner to inspect the state of your application, debug your code, and interact with your tests. You can also use the Cypress DevTools to debug your application’s JavaScript code.
+
+Question 31: How do you configure Cypress for your project?
+Ans: Cypress can be configured using the cypress.json file or the Cypress configuration API. You can configure various options such as the base URL, test files, plugins, and environment variables.
+
+Question 32 : How do you handle authentication in Cypress?
+Ans: Cypress provides built-in commands for handling authentication, such as cy.request(), cy.setCookie(), and cy.login(). You can use these commands to authenticate your application before running tests.
+
+Question 33: How do you handle file uploads in Cypress?
+Ans: Cypress provides a command called cy.fixture() to load files into your test. You can then use the cy.get() command to select the file input element and the cy.upload() command to upload the file.
+
+Question 34: How do you handle dynamic data in Cypress?
+Ans: Cypress provides several commands for handling dynamic data, such as cy.wrap(), cy.then(), and cy.should(). You can use these commands to chain together multiple Cypress commands and handle dynamic data in your tests.
+
+Question 35: How do you handle timeouts in Cypress?
+Ans: Cypress provides a default timeout of 4 seconds for most commands. However, you can increase or decrease the timeout using the Cypress configuration API. You can also use the cy.wait() command to pause a test for a specified amount of time.
+
+Question 36: How do you handle errors in Cypress?
+Ans: Cypress provides detailed error messages and stack traces to help you debug your tests. You can also use the Cypress.on() command to listen for errors and handle them in your test code.
+
+Question 37: How do you run Cypress tests in a CI/CD environment?
+Ans: Cypress can be easily integrated into a CI/CD pipeline using popular tools such as Jenkins, CircleCI, and Travis CI. You can use the Cypress CLI to run tests in headless mode and generate reports in various formats such as JUnit, Mocha, and JSON. Additionally, you can also run tests in parallel to speed up the test execution time.
+
+Question 38: What makes Cypress a unique tool?
+Ans: Cypress is a unique testing tool because it runs tests directly within the browser. This offers real-time feedback, faster execution, and seamless debugging, which makes it highly efficient for developers to create reliable and end-to-end tests.
+
+Question 39: What type of framework is Cypress?
+Ans: Cypress is an end-to-end testing framework. It is specifically designed for testing web applications from the user's perspective. It allows developers to write and execute tests that simulate the application's fundamental user interactions and behaviors.
+
+Question 40: How would you describe the Cypress framework in an interview?
+Ans: I can provide a general description of how a BDD (Behavior-Driven Development) Cucumber framework can be used in a Cypress web automation project with JavaScript.
+
+BDD Cucumber Framework with Cypress in JavaScript:
+
+Behavior-Driven Development (BDD): BDD is a software development approach that focuses on collaboration between developers, testers, and business stakeholders. It encourages writing test cases in a human-readable format, often using Gherkin syntax, which allows non-technical stakeholders to understand the test scenarios easily.
+
+
+Cucumber: Cucumber is a popular BDD testing tool that supports the Gherkin language. It allows teams to define test scenarios in plain text, facilitating communication and collaboration among team members.
+
+Cypress: Cypress is a modern JavaScript-based end-to-end testing framework for web applications. It provides fast and reliable test automation capabilities and supports real-time test execution.
+
+Integrating BDD Cucumber with Cypress:
+
+Project Setup: Set up a new Cypress project or integrate Cucumber into an existing Cypress project. Install the necessary dependencies, including Cypress, Cucumber, and any additional plugins or libraries required for integration.
+
+Feature Files: Create feature files in the cypress/integration directory. Feature files contain test scenarios written in Gherkin syntax. Each scenario consists of steps written in plain text, which will be mapped to automation steps later.
+
+Step Definitions: Create step definition files in the cypress/support/step_definitions directory. These files contain JavaScript functions that define the automation steps for each Gherkin step in the feature files.
+
+Mapping Steps to Cypress Commands: Inside the step definition files, map the Gherkin steps to Cypress commands that interact with the application under test. Cypress commands will be used to perform actions and make assertions.
+
+Execution: Use Cucumber's test runner to execute the feature files. The test runner reads the Gherkin scenarios and matches them with the corresponding step definitions, executing the Cypress commands for each step.
+
+Reporting: Cucumber provides detailed test reports in various formats, allowing stakeholders to easily understand the test results and the status of each scenario.
+
+Benefits of BDD Cucumber Framework in Cypress:
+
+Improved Collaboration: BDD's plain-text format encourages collaboration between stakeholders, developers, and testers, promoting better communication and understanding of test scenarios.
+
+Readable Test Scenarios: Gherkin syntax makes test scenarios more readable, even for non-technical team members, enabling them to participate in the testing process.
+
+Maintainable Test Code: Separating test scenarios from the automation code (step definitions) improves test code maintainability, making it easier to update and expand test scenarios.
+
+Clear Traceability: The mapping between feature files and step definitions provides clear traceability between test cases and the automation code, aiding in debugging and troubleshooting.
+
+Business-Focused Testing: BDD Cucumber allows testing to be driven by business requirements, ensuring that the application meets the desired functionality.
+
+Note: The exact implementation of a BDD Cucumber framework in a Cypress project can vary based on the project's specific requirements and team preferences.
+
+Question 41: Could you talk something about Cypress file and folder structures?
+Ans: Cypress uses cypress.json file, if we want to specify any custom configuration which is located in the root of our project.
+The folder named cypress is located in the project root folder which is main folder for cypress automation framework.
+By default Cypress folder contains 4 subfolders namely fixtures, integration, plugins and support.
+
+1.Fixtures folder can be used to store our external Json data files and we can use these files in our tests using the command cy.fixture().
+
+2.Integration folder mainly consists of our actual spec/test files
+
+3.Plugins folder contains special files that executes in Node before project is loaded, before the browser launches, and during your test execution. This is very  helpful when we want to have pre processes and post processors. Files in this folder can be executed after all the test execution is complete as well.Example: Let us consider, If we want to generate HTML result after all the test is completed. The HTML report generation or collating those HTML reports can be done here in this file.
+
+4.Support folder contains the special file index.js which will be run before each and every test. Support folder can also be used to create utility methods which will be helpful in through out our automation framework. This file is the perfect place to put all your reusable behavior such as Custom commands or global overrides that you want to be applied to all of your spec files.
+
+Question 42: What is Cypress CLI?
+Cypress CLI is unique feature in cypress it provides ability to run our cypress tests in command line. This feature is helpful when we run our cypress tests in pipelines. It provides many options and flags control the cypress test behavior.
+Example: use npm cypress run to run your tests in command line.
+
+Question 43: How can I run single spec file in command line?
+We can run single spec file in command line using - - spec option and specifying test name.
+Example:  npm cypress run - - spec=”myspec.ts”.
+
+Question 44: 
+Ans : To work with different environments (such as QA, Pre-Prod, and Prod) in Cypress, you can use environment variables to store the URLs for each environment. Here's an example of how to set up environment variables in Cypress:
+
+1.Create a cypress.json file in your project's root directory if it doesn't exist already.
+
+2.Inside the cypress.json file, add a baseUrl property with the URL for your default environment (usually your local environment). For example:
+{
+  "baseUrl": "<http://localhost:3000>"
+}
+
+3.In your test files, use Cypress.env() to access the environment variables. For example, to navigate to the QA environment, you can use:
+cy.visit(Cypress.env('qaUrl'))
+
+4.Set up the environment variables for each environment in your CI/CD pipeline or in your local environment. For example, if you're using GitLab CI, you can define environment variables in the gitlab-ci.yml file:
+variables:
+  qaUrl: "<https://qa.example.com>"
+  preProdUrl: "<https://preprod.example.com>"
+  prodUrl: "<https://example.com>"
+If you're running Cypress locally, you can set the environment variables in your terminal or in a .env file.
+By using environment variables, you can easily switch between different environments without having to modify your test files. You can also use conditional statements to run different tests or test configurations based on the environment variables.
+
+Question 45: How to set command timeout in cypress?
+Ans: We can set the command timeout in Cypress using the defaultCommandTimeout configuration option in the cypress.json file. Here's how:
+1.Create a cypress.json file in your project's root directory if it doesn't exist already.
+2.Inside the cypress.json file, add a defaultCommandTimeout property with the desired timeout value in milliseconds. For example:
+{
+  "defaultCommandTimeout": 10000
+}
+This sets the command timeout to 10 seconds.
+
+Alternatively, you can set the command timeout programmatically using the cy.timeout() command in your test file. For example, to set the command timeout to 20 seconds for a specific test, you can use:
+it('should do something', () => {
+  cy.timeout(20000)
+  // Test code goes here
+})
+Note that setting a longer command timeout can make your tests slower, so it's important to balance the timeout value with the expected duration of your commands.
+
+Question 46: How to upload file in cypress?
+Ans: To upload a file in Cypress, you can use the cy.fixture() command to load the file as a fixture, and then use the cy.get() command to select the file input element and set its value to the fixture.
+
+Here's an example code snippet:
+// Load the file as a fixture
+cy.fixture('example.jpg').then(fileContent => {
+  // Select the file input element and set its value to the fixture
+  cy.get('input[type=file]').attachFile({
+    fileContent: fileContent,
+    fileName: 'example.jpg',
+    mimeType: 'image/jpg'
+  })
+})
+
+In this example, we're loading a file called example.jpg as a fixture and then selecting the file input element using cy.get('input[type=file]'). We then use the attachFile() command to attach the fixture to the file input element.
+
+Note that the attachFile() command is only available in Cypress version 6.0.0 or later. If you're using an earlier version of Cypress, you can use the cy.fixture() and cy.get() commands to load the file and set its value, respectively, but you may need to use a different method to trigger the file upload, such as submitting the form containing the file input element.
+
+Question 47: How we create custom command in cypress ?
+Ans: To create a custom command in Cypress, you can use the Cypress.Commands.add() method. This method allows you to define a custom command that can be reused throughout your Cypress test suite. Here's an example of how to create a custom command:
+
+1. In your Cypress project, locate the commands.js file. If it doesn't exist, you can create it in the cypress/support directory.
+
+2. Open the commands.js file and use the Cypress.Commands.add() method to define your custom command. The method takes two arguments: the command name and a callback function that contains the logic for your command. Here's an example of a custom command that logs in to a website:
+
+Cypress.Commands.add('login', (username, password) => {
+  // Custom command logic
+  cy.visit('/login');
+  cy.get('#username').type(username);
+  cy.get('#password').type(password);
+  cy.get('#login-button').click();
+});
+
+3.Save the commands.js file.
+
+4.To use the custom command in your tests, you need to import it in your test files. In your test file, add the following line at the top:   import './commands
+
+5.You can now use the custom command in your tests. Here's an example:
+describe('Login', () => {
+  it('should log in successfully', () => {
+
+    
+    cy.login('myusername', 'mypassword');
+    // Continue with your assertions and test steps after logging in
+  });
+});
+In this example, the custom command cy.login() is used to simplify the login process. It can be reused in multiple test cases, making your tests more concise and readable.
+Remember to restart the Cypress Test Runner if it was already running before adding the custom command, as it needs to reload the changes.
+
+Question 48: What will be the steps for a setting up cucumber BDD framework in cypress project?
+Ans: To set up a Cucumber BDD framework in a Cypress project with version 12.14.0, you can follow these steps:
+
+Step 1: Set up a Cypress project
+1. Create a new directory for your project and navigate to it.
+2. Initialize a new npm project by running the command: npm init -y. This will create a package.json file.
+
+Step 2: Install Cypress
+1.Install Cypress as a dev dependency by running the following command: npm install cypress --save-dev.
+2. Once the installation is complete, initialize Cypress by running the command: npx cypress open. This will create the necessary folder structure and files for Cypress.
+
+Step 3: Install Cucumber dependencies
+1. Install the necessary dependencies for Cucumber and Cypress integration by running the following command: npm install cypress-cucumber-preprocessor --save-dev.
+
+Step 4: Configure Cypress with Cucumber
+1.Create a new file named cypress/plugins/index.js and add the following code:
+const cucumber = require('cypress-cucumber-preprocessor').default;
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber());
+};
+
+1. Create a new file named cypress/support/step_definitions/basic_steps.js. This will serve as an example step definition file for Cucumber. Add the following code:  import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
+Given('I visit the {string} page', (page) => {
+  cy.visit(page);
+});
+Then('I should see the title {string}', (title) => {
+  cy.title().should('include', title);
+});
+
+1. Create a new folder named cypress/integration to store your feature files.
+Step 5: Create a feature file
+1. Inside the cypress/integration folder, create a new file with the extension .feature, e.g., example.feature.
+2.Write your feature file using the Gherkin syntax. Here's an example:
+Feature: Title of your feature
+  As a user
+  I want to visit a website
+  So that I can see the expected title
+    Scenario: Verify page title
+    Given I visit the "<https://www.example.com>" page
+    Then I should see the title "Example Domain"
+
+Step 6: Run the tests
+1. Run Cypress by executing the command: npx cypress open.
+2.The Cypress Test Runner will open. Click on your feature file (example.feature in this case) to run the test.
+
+That's it! You have set up a Cucumber BDD framework in your Cypress project. You can now add more feature files and step definitions as needed for your tests.
+
+Question 49: What is this in cypress cy.origin()?
+Ans:  In Cypress, there is indeed a cy.origin() command, which retrieves the origin of the current document.The cy.origin() command returns the origin URL of the webpage being tested. The origin URL includes the protocol (e.g., "http://" or "https://"), domain, and port. It is useful when you need to validate or compare the origin of the current webpage.
+
+Here's an example of how you can use cy.origin() in Cypress:
+cy.origin().then(origin => {
+  // 'origin' variable contains the origin URL of the webpage
+  console.log(origin);
+});
+
+Note that cy.origin() is an asynchronous command, so you need to handle it using promises or Cypress's chaining syntax.
+Please note that the cy.origin() command is available in Cypress version 7.0.0 and above. If you're using an older version, you might not find this command. Make sure you have an up-to-date version of Cypress to use this command effectively.
+
+Question 50: How to use Test Retries in Cypress Framework in feature file ?
+Ans: In Cypress, the Test Retries feature allows you to automatically rerun failed tests to improve test stability and reliability. However, Cypress does not natively support writing tests in feature files. It uses its own declarative syntax for writing tests.
+
+That being said, you can still implement test retries in Cypress, but you'll need to use Cypress' JavaScript API instead of feature files. Here's how you can use test retries in Cypress:
+
+1. Install Cypress: Make sure you have Cypress installed in your project. You can install it by running the following command: npm install cypress --save-dev
+
+2.Create Cypress test files: Cypress tests are typically written in JavaScript files with a .spec.js or .test.js extension. Create your test files in the cypress/integration directory. For example, you can create a file named example.spec.js:  describe('Example Test', () => {
+  it('should retry on failure', () => {
+    cy.visit('<https://example.com>')
+    // Write your test code here
+    // ...
+  })
+})
+
+3. Configure test retries: Open the cypress.json file located in the root of your project (create one if it doesn't exist). Add the following configuration to enable test retries:
+{
+  "retries": 2
+}
+In this example, 2 is the number of times Cypress will retry a failed test.
+
+4. Run the tests: You can now run your Cypress tests using the Cypress Test Runner. Open a terminal, navigate to your project directory, and run the following command: npx cypress open
+The Cypress Test Runner will open, and you can select your test file to run. If any tests fail, Cypress will automatically retry them according to the configured number of retries.
+Note that Cypress will only retry tests that fail during the initial run. If a test still fails after all retries, Cypress will report it as a failed test.
+
+Question 51: List Cypress Commands for Installing Cypress Project?
+Ans: To install a Cypress project, you can follow these steps:
+1.Create a new directory for your project (if you haven't already done so) and navigate to that directory using your command-line interface (CLI).
+2. Run the following commands in your CLI:
+# Step 1: Initialize a new npm project :   npm init -y
+# Step 2: Install Cypress as a dev dependency :  npm install cypress --save-dev
+# Step 3: Initialize Cypress : npx cypress open
+The above commands will initialize a new npm project, install Cypress as a dev dependency, and then open the Cypress Test Runner for your project.
+
+
+                                       OR
+Note: If you prefer using Yarn, you can replace the npm commands with yarn commands. For example:
+# Step 1: Initialize a new npm project : yarn init -y
+# Step 2: Install Cypress as a dev dependency : yarn add cypress --dev
+# Step 3: Initialize Cypress : npx cypress open
+Once Cypress is installed and the Test Runner is open, you can start writing and running your tests.
+
+Question 52: How to maximize window in cypress?
+Ans: To maximize the window in Cypress, you can use the cy.viewport() command with the viewportWidth and viewportHeight parameters set to null. Here's an example:  cy.viewport(null, null);
+This command sets the viewport dimensions to null, which will automatically maximize the window to fit the available screen space.
+You can place this command at the beginning of your test or in a beforeEach() hook to ensure that the window is maximized before each test case runs.
+Note that the cy.viewport() command only affects the visual representation of the application within the Cypress test runner. It does not control the actual browser window size or maximize the browser window on the operating system level.
+
+Question 53: How to read write file in cypress ?
+Ans: In Cypress, you cannot directly read or write files on the file system because Cypress operates within the browser and runs in a sandboxed environment. However, you can use the cy.writeFile() and cy.readFile() commands to interact with files within the browser's memory. Here's how you can use these commands in Cypress:
+
+1. Writing a file: To write a file in Cypress, you can use the cy.writeFile() command. It allows you to create or overwrite a file with content. Here's an example: cy.writeFile('path/to/file.txt', 'Hello, world!')
+This command will create a file named file.txt with the content "Hello, world!" at the specified path.
+
+2.Reading a file: To read the contents of a file in Cypress, you can use the cy.readFile() command. It allows you to retrieve the contents of a file within the browser's memory. Here's an example:
+cy.readFile('path/to/file.txt').then((content) => {
+  // Handle the file content here
+  console.log(content);
+})
+This command reads the content of the file.txt file at the specified path and logs it to the console.
+Please note that the cy.writeFile() and cy.readFile() commands operate within the context of the browser's memory and do not directly interact with files on the file system. They are mainly useful for test-related operations or to simulate file interactions within the Cypress test environment.
+
+Question 54: How to create report in cypress?
+Ans: To create a report in Cypress, you can use various reporting plugins and libraries. One popular option is the mochawesome reporter, which generates detailed HTML reports. Here's how you can create a report using mochawesome in Cypress:
+1.Install the necessary dependencies. Run the following command in your Cypress project's root directory:
+npm install --save-dev mocha mochawesome.
+
+2. Update your project's Cypress configuration. Open the cypress.json file and add the following lines:
+
+{
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "overwrite": false,
+    "html": true,
+    "json": false
+  }
+}
+This configuration specifies the mochawesome reporter as the main reporter and sets the report directory to cypress/reports. It also specifies not to overwrite existing reports, enables HTML report generation, and disables JSON report generation.
+
+3.Run your Cypress tests. Execute your Cypress tests as usual, without any additional reporter options. 
+For example: npx cypress run.
+
+Access the generated report. After the test execution completes, you can find the generated report in the specified reportDir directory (cypress/reports in this example). The report will consist of an HTML file (mochawesome.html) that contains detailed information about the test execution results.
+
+You can open the HTML file in a web browser to view the report. The mochawesome reporter provides a rich and interactive report with detailed test results, including test descriptions, pass/fail status, error messages, screenshots, and more.
+
+Question 55: How to generate a single report which consist of all spec file result in cypress?
+Ans: To generate a single report that consolidates the results of all spec files in Cypress, you can use the cypress-multi-reporters plugin. This plugin allows you to configure multiple reporters and merge their results into a single report. Here's how you can do it:
+
+1.Install the necessary dependencies. Run the following command in your Cypress project's root directory:
+npm install --save-dev mocha mochawesome cypress-multi-reporters
+
+2.Update your project's Cypress configuration. Open the cypress.json file and add the following lines:
+{
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome, junit",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mochawesome",
+      "overwrite": false,
+      "html": false,
+      "json": true
+    },
+    "junitReporterOptions": {
+      "mochaFile": "cypress/reports/junit/results-[hash].xml"
+    }
+  }
+}
+This configuration sets the cypress-multi-reporters plugin as the main reporter and enables two sub-reporters: mochawesome and junit. It specifies the report directories for each sub-reporter and sets the desired options.
+
+1.Run your Cypress tests with the multi-reporter. Execute your Cypress tests as usual, without any additional reporter options. For example:  npx cypress run
+
+Access the generated report. After the test execution completes, you can find the consolidated report in the specified reportDir directory for each sub-reporter. In this example, the mochawesome reporter's report will be located in cypress/reports/mochawesome, and the junit reporter's report will be stored in cypress/reports/junit.
+The mochawesome reporter generates an HTML report by default, so you can open the generated index.html file in the mochawesome report directory to view the results. The junit reporter generates an XML report that can be used for integration with other tools.
+
+You can adjust the configuration and customize the report directories, file names, and other options according to your preferences and requirements.
+
+Please note that the cypress-multi-reporters plugin allows you to use multiple reporters simultaneously, so you can include additional reporters if needed, such as cypress-cucumber-preprocessor for cucumber-style reporting. Refer to the plugin's documentation for more details on configuration options and supported reporters.
+
+Question 56: How you generating execution reports in cypress?
+Ans: In Cypress, you can generate execution reports using various plugins and libraries. One popular option is the cypress-mochawesome-reporter plugin, which integrates Cypress with the Mochawesome reporting library. Here's how you can generate execution reports using this plugin:
+
+1.Install the necessary dependencies. Run the following command in your Cypress project's root directory:
+npm install --save-dev mocha mochawesome cypress-mochawesome-reporter
+
+2.Update your project's Cypress configuration. Open the cypress.json file and add the following lines:
+{
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
+}
+This configuration specifies the reporter to use and sets the report directory to cypress/reports. It also specifies not to overwrite existing reports, generates JSON reports, and disables the HTML report generation.
+
+1. Run your Cypress tests with the reporter. When executing your Cypress tests, add the --reporter cypress-mochawesome-reporter option to generate the Mochawesome report. For example:
+npx cypress run --reporter cypress-mochawesome-reporter
+
+1.Access the generated reports. After the test execution completes, you can find the generated Mochawesome report in the specified reportDir directory (cypress/reports in this example). You will see a JSON file containing the test execution results.
+Additionally, you can customize the Mochawesome report's appearance and behavior by referring to the Mochawesome documentation and exploring the available options in the cypress-mochawesome-reporter plugin.
+
+Note: The example above uses the cypress-mochawesome-reporter plugin, but there are other reporting plugins available for Cypress as well. You can explore different plugins based on your specific requirements and preferences.
+
+Question 57: How to explain in interview cypress  folder, architecture and structure in JavaScript?
+Ans: In an interview, explaining the Cypress folder structure and architecture in JavaScript showcases your understanding of how Cypress organizes test code and other resources. Here's a concise explanation you can use: Cypress Folder Structure and Architecture in JavaScript:
+
+1.cypress Folder: The cypress folder is the root directory of the Cypress projectIt contains various subdirectories and files that organize the test code and configurations.
+
+2.cypress/integration Folder: The integration folder holds all the test files written using Cypress.
+Each test file represents a test suite and contains one or more test cases (it blocks).
+
+3.Test Files (e.g., spec.js): Test files are written in JavaScript and use Cypress commands to interact with the application and make assertions. The describe block represents a test suite, and the it blocks represent individual test cases.
+
+4.cypress/support Folder: The support folder contains files for global configuration and reusable custom commands.
+commands.js: You can define custom Cypress commands here to extend the built-in commands and reuse them across test files.
+index.js: The index.js file is loaded before all test files and can be used for global configuration or setup.
+
+5.cypress/fixtures Folder: The fixtures folder is used to store external data files (e.g., JSON, CSV) that can be used in test cases.Fixtures allow you to separate test data from test code, making tests more maintainable.
+
+6.cypress/plugins Folder: The plugins folder contains files that can customize or extend Cypress functionalities.
+index.js: This file is used for customizing Cypress behavior, such as loading plugins or setting up environment variables.
+
+7.cypress/screenshots and cypress/videos Folders: The screenshots folder stores screenshots captured during test failures.
+The videos folder stores videos of test execution if you use a plugin to record test videos.
+cypress.json:
+
+8.The cypress.json file holds configuration settings for Cypress.You can specify the base URL, environment variables, custom configurations, and other settings here.
+
+9.Cypress Test Runner: The Cypress Test Runner provides a graphical user interface (GUI) for interacting with tests and viewing their execution.It allows you to run, debug, and inspect tests interactively.
+
+10.Command Line Interface (CLI):Cypress can also be run from the command line using various CLI commands.
+This allows for automated test execution, integration with CI/CD pipelines, and non-interactive test runs.
+
+By explaining the Cypress folder structure and architecture, you demonstrate your familiarity with the organization of test code and resources in Cypress, which is essential for effectively building and maintaining scalable test suites.
+
+Question 58: How Cypress run tests in serial & parallel mode in Cypress?
+Ans: Cypress runs tests in either serial mode or parallel mode, depending on how you execute your test suite. Here's how Cypress handles test execution in each mode:
+
+1.Serial Mode: 
+Serial mode is the default mode in Cypress.
+.When you run tests in serial mode, Cypress executes the test files one after another in a single browser window or Electron instance.
+.The tests are executed in the order they are defined in the test files.
+.In serial mode, Cypress runs the tests sequentially, waiting for each test to complete before moving on to the next one.
+.Serial mode is useful for debugging, inspecting test execution, and running tests that have dependencies on each other.
+.To run tests in serial mode, you can use the Cypress Test Runner or the cypress open command without any additional options. :  npx cypress open
+
+2.Parallel Mode:
+Parallel mode allows Cypress to execute tests concurrently in multiple browser instances or "headed" Electron instances.
+This mode is available starting from Cypress version 7.
+Parallel mode is designed to reduce test execution time significantly, especially when you have a large test suite with multiple test files.
+By running tests in parallel, multiple tests are executed simultaneously, which can greatly improve the overall test execution speed.
+This mode is particularly useful for Continuous Integration (CI) environments and large-scale testing.
+To run tests in parallel mode, you need to use the --parallel option with the cypress run command. 
+npx cypress run --parallel
+
+3.Updating Settings for Parallel Mode:
+.When running tests in parallel mode, you can control how Cypress divides the tests across instances and other settings using the --group and --ci-build-id options:
+
+. --group option: This option lets you group tests together to ensure that certain tests run on the same machine. Use this option to control test distribution and manage test dependencies.
+For example:  npx cypress run --parallel --group smoke 
+
+. --ci-build-id option: When running on CI, you can use this option to identify the current CI build. It helps in distributing tests evenly and ensuring consistent test runs.
+For example: npx cypress run --parallel --ci-build-id 12345
+
+Note: Parallel mode requires more system resources as it runs multiple instances of the browser or Electron. Make sure your environment has sufficient resources to handle the parallel execution.
+
+Question 59: How To Retry Failed Test Cases in Cypress?
+Ans: Cypress doesn't have a built-in feature for automatically retrying failed test cases. However, there are third-party plugins available that provide retry functionality in Cypress. One such plugin is "cypress-plugin-retries."
+To retry failed test cases in Cypress using "cypress-plugin-retries," follow these steps:
+
+1. Install the Plugin:
+Run the following command in your Cypress project directory to install the "cypress-plugin-retries" plugin:
+npm install --save-dev cypress-plugin-retries
+
+2.Update the Cypress Configuration:
+In your Cypress project's cypress/support/index.js file, add the following code to load the retries plugin:
+// cypress/support/index.js
+import 'cypress-plugin-retries';
+
+3.Configure the Retries:
+By default, "cypress-plugin-retries" retries failed test cases up to 2 times. You can configure the number of retries or specify specific tests to be retried. To customize the number of retries, add the following to your "cypress.json" configuration file:
+{
+  "retries": 3
+}
+This example sets the number of retries to 3. You can adjust the value based on your requirements.
+
+4.Run the Tests:
+Run your Cypress tests as usual using the Test Runner or CLI commands. If a test fails, the "cypress-plugin-retries" plugin will automatically retry it the specified number of times.
+
+Please note that the availability and functionality of third-party plugins can change over time. Always refer to the official documentation and GitHub repository of "cypress-plugin-retries" for the most up-to-date information and features.
+
+Question 60: 
+
+
+
+
+
